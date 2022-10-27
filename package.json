@@ -1,7 +1,6 @@
 {
   "name": "desafios-backend-master",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "abbrev": "^1.1.1",
@@ -159,5 +158,6 @@
   "bugs": {
     "url": "https://github.com/aguilerasofia/BackendMaster/issues"
   },
-  "homepage": "https://github.com/aguilerasofia/BackendMaster#readme"
+  "homepage": "https://github.com/aguilerasofia/BackendMaster#readme",
+  "description": ""
 }
