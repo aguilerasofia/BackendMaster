@@ -71,5 +71,3 @@ await mongoose.disconnect()
 // => 5to use "en este caso colegio"
 // => 6to show collections
 // => 7mo db.estudiantes.find()
-
-//15 54 911 941

@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 import dotenv from 'dotenv';
 import { ProductoDao } from './dao/ProductoDao.js';
 import { CarritoDao } from './dao/CarritoDao.js'
