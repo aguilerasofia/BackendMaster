@@ -1,18 +1,20 @@
-const express = require('express');
-import {productRouter} from './routes/product.js';
-import {cartRouter} from './routes/cart.js';
+import express from 'express'
+import routerProducts from './routes/routesProd.js'
+import routerCart from './routes/routesCart.js'
+import config from './config.js'
 
-const PORT = 8080;
-const app = express();
+const app=express()
 
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'))
+app.use('/api/productos',routerProducts)
+app.use('/api/carrito',routerCart)
 
-app.use('/api/productos', productRouter);
-app.use('/api/carrito', cartRouter);
+// app.get('/', (req, res) => {
+//     res.render('pages/index');
+// });
 
+const PORT = config.port
 const server = app.listen(PORT, () => {
-    console.log(` >>>>> 🚀 Server started at http://localhost:${PORT}`)
-    })
-    
-server.on('error', (err) => console.log(err));
+    console.log(`Servidor escuchando en el puerto ${server.address().port}`)
+})
+server.on('error', error => console.log(`Error en servidor ${error}`))
